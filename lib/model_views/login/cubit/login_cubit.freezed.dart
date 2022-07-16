@@ -22,6 +22,9 @@ mixin _$LoginState {
     required TResult Function() loading,
     required TResult Function(LoginEntity loginEntity) loaded,
     required TResult Function(Failure failure) error,
+    required TResult Function(List<ValidationField> validations)
+        validationError,
+    required TResult Function(LoginParams params) changeParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,8 @@ mixin _$LoginState {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +43,8 @@ mixin _$LoginState {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +54,8 @@ mixin _$LoginState {
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateLoaded value) loaded,
     required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateValidationError value) validationError,
+    required TResult Function(LoginStateChangeParams value) changeParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +64,8 @@ mixin _$LoginState {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +74,8 @@ mixin _$LoginState {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -129,6 +142,9 @@ class _$LoginStateInitial implements LoginStateInitial {
     required TResult Function() loading,
     required TResult Function(LoginEntity loginEntity) loaded,
     required TResult Function(Failure failure) error,
+    required TResult Function(List<ValidationField> validations)
+        validationError,
+    required TResult Function(LoginParams params) changeParams,
   }) {
     return initial();
   }
@@ -140,6 +156,8 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
   }) {
     return initial?.call();
   }
@@ -151,6 +169,8 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -166,6 +186,8 @@ class _$LoginStateInitial implements LoginStateInitial {
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateLoaded value) loaded,
     required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateValidationError value) validationError,
+    required TResult Function(LoginStateChangeParams value) changeParams,
   }) {
     return initial(this);
   }
@@ -177,6 +199,8 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
   }) {
     return initial?.call(this);
   }
@@ -188,6 +212,8 @@ class _$LoginStateInitial implements LoginStateInitial {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -246,6 +272,9 @@ class _$LoginStateLoading implements LoginStateLoading {
     required TResult Function() loading,
     required TResult Function(LoginEntity loginEntity) loaded,
     required TResult Function(Failure failure) error,
+    required TResult Function(List<ValidationField> validations)
+        validationError,
+    required TResult Function(LoginParams params) changeParams,
   }) {
     return loading();
   }
@@ -257,6 +286,8 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
   }) {
     return loading?.call();
   }
@@ -268,6 +299,8 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -283,6 +316,8 @@ class _$LoginStateLoading implements LoginStateLoading {
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateLoaded value) loaded,
     required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateValidationError value) validationError,
+    required TResult Function(LoginStateChangeParams value) changeParams,
   }) {
     return loading(this);
   }
@@ -294,6 +329,8 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
   }) {
     return loading?.call(this);
   }
@@ -305,6 +342,8 @@ class _$LoginStateLoading implements LoginStateLoading {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -388,6 +427,9 @@ class _$LoginStateLoaded implements LoginStateLoaded {
     required TResult Function() loading,
     required TResult Function(LoginEntity loginEntity) loaded,
     required TResult Function(Failure failure) error,
+    required TResult Function(List<ValidationField> validations)
+        validationError,
+    required TResult Function(LoginParams params) changeParams,
   }) {
     return loaded(loginEntity);
   }
@@ -399,6 +441,8 @@ class _$LoginStateLoaded implements LoginStateLoaded {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
   }) {
     return loaded?.call(loginEntity);
   }
@@ -410,6 +454,8 @@ class _$LoginStateLoaded implements LoginStateLoaded {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -425,6 +471,8 @@ class _$LoginStateLoaded implements LoginStateLoaded {
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateLoaded value) loaded,
     required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateValidationError value) validationError,
+    required TResult Function(LoginStateChangeParams value) changeParams,
   }) {
     return loaded(this);
   }
@@ -436,6 +484,8 @@ class _$LoginStateLoaded implements LoginStateLoaded {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
   }) {
     return loaded?.call(this);
   }
@@ -447,6 +497,8 @@ class _$LoginStateLoaded implements LoginStateLoaded {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -535,6 +587,9 @@ class _$LoginStateError implements LoginStateError {
     required TResult Function() loading,
     required TResult Function(LoginEntity loginEntity) loaded,
     required TResult Function(Failure failure) error,
+    required TResult Function(List<ValidationField> validations)
+        validationError,
+    required TResult Function(LoginParams params) changeParams,
   }) {
     return error(failure);
   }
@@ -546,6 +601,8 @@ class _$LoginStateError implements LoginStateError {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
   }) {
     return error?.call(failure);
   }
@@ -557,6 +614,8 @@ class _$LoginStateError implements LoginStateError {
     TResult Function()? loading,
     TResult Function(LoginEntity loginEntity)? loaded,
     TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -572,6 +631,8 @@ class _$LoginStateError implements LoginStateError {
     required TResult Function(LoginStateLoading value) loading,
     required TResult Function(LoginStateLoaded value) loaded,
     required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateValidationError value) validationError,
+    required TResult Function(LoginStateChangeParams value) changeParams,
   }) {
     return error(this);
   }
@@ -583,6 +644,8 @@ class _$LoginStateError implements LoginStateError {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
   }) {
     return error?.call(this);
   }
@@ -594,6 +657,8 @@ class _$LoginStateError implements LoginStateError {
     TResult Function(LoginStateLoading value)? loading,
     TResult Function(LoginStateLoaded value)? loaded,
     TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -609,5 +674,336 @@ abstract class LoginStateError implements LoginState {
   Failure get failure;
   @JsonKey(ignore: true)
   _$$LoginStateErrorCopyWith<_$LoginStateError> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoginStateValidationErrorCopyWith<$Res> {
+  factory _$$LoginStateValidationErrorCopyWith(
+          _$LoginStateValidationError value,
+          $Res Function(_$LoginStateValidationError) then) =
+      __$$LoginStateValidationErrorCopyWithImpl<$Res>;
+  $Res call({List<ValidationField> validations});
+}
+
+/// @nodoc
+class __$$LoginStateValidationErrorCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res>
+    implements _$$LoginStateValidationErrorCopyWith<$Res> {
+  __$$LoginStateValidationErrorCopyWithImpl(_$LoginStateValidationError _value,
+      $Res Function(_$LoginStateValidationError) _then)
+      : super(_value, (v) => _then(v as _$LoginStateValidationError));
+
+  @override
+  _$LoginStateValidationError get _value =>
+      super._value as _$LoginStateValidationError;
+
+  @override
+  $Res call({
+    Object? validations = freezed,
+  }) {
+    return _then(_$LoginStateValidationError(
+      validations == freezed
+          ? _value._validations
+          : validations // ignore: cast_nullable_to_non_nullable
+              as List<ValidationField>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoginStateValidationError implements LoginStateValidationError {
+  const _$LoginStateValidationError(final List<ValidationField> validations)
+      : _validations = validations;
+
+  final List<ValidationField> _validations;
+  @override
+  List<ValidationField> get validations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_validations);
+  }
+
+  @override
+  String toString() {
+    return 'LoginState.validationError(validations: $validations)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoginStateValidationError &&
+            const DeepCollectionEquality()
+                .equals(other._validations, _validations));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_validations));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$LoginStateValidationErrorCopyWith<_$LoginStateValidationError>
+      get copyWith => __$$LoginStateValidationErrorCopyWithImpl<
+          _$LoginStateValidationError>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(LoginEntity loginEntity) loaded,
+    required TResult Function(Failure failure) error,
+    required TResult Function(List<ValidationField> validations)
+        validationError,
+    required TResult Function(LoginParams params) changeParams,
+  }) {
+    return validationError(validations);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(LoginEntity loginEntity)? loaded,
+    TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
+  }) {
+    return validationError?.call(validations);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(LoginEntity loginEntity)? loaded,
+    TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
+    required TResult orElse(),
+  }) {
+    if (validationError != null) {
+      return validationError(validations);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginStateInitial value) initial,
+    required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateLoaded value) loaded,
+    required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateValidationError value) validationError,
+    required TResult Function(LoginStateChangeParams value) changeParams,
+  }) {
+    return validationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(LoginStateInitial value)? initial,
+    TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateLoaded value)? loaded,
+    TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
+  }) {
+    return validationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginStateInitial value)? initial,
+    TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateLoaded value)? loaded,
+    TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
+    required TResult orElse(),
+  }) {
+    if (validationError != null) {
+      return validationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginStateValidationError implements LoginState {
+  const factory LoginStateValidationError(
+      final List<ValidationField> validations) = _$LoginStateValidationError;
+
+  List<ValidationField> get validations;
+  @JsonKey(ignore: true)
+  _$$LoginStateValidationErrorCopyWith<_$LoginStateValidationError>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoginStateChangeParamsCopyWith<$Res> {
+  factory _$$LoginStateChangeParamsCopyWith(_$LoginStateChangeParams value,
+          $Res Function(_$LoginStateChangeParams) then) =
+      __$$LoginStateChangeParamsCopyWithImpl<$Res>;
+  $Res call({LoginParams params});
+}
+
+/// @nodoc
+class __$$LoginStateChangeParamsCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res>
+    implements _$$LoginStateChangeParamsCopyWith<$Res> {
+  __$$LoginStateChangeParamsCopyWithImpl(_$LoginStateChangeParams _value,
+      $Res Function(_$LoginStateChangeParams) _then)
+      : super(_value, (v) => _then(v as _$LoginStateChangeParams));
+
+  @override
+  _$LoginStateChangeParams get _value =>
+      super._value as _$LoginStateChangeParams;
+
+  @override
+  $Res call({
+    Object? params = freezed,
+  }) {
+    return _then(_$LoginStateChangeParams(
+      params == freezed
+          ? _value.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as LoginParams,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoginStateChangeParams implements LoginStateChangeParams {
+  const _$LoginStateChangeParams(this.params);
+
+  @override
+  final LoginParams params;
+
+  @override
+  String toString() {
+    return 'LoginState.changeParams(params: $params)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoginStateChangeParams &&
+            const DeepCollectionEquality().equals(other.params, params));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(params));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$LoginStateChangeParamsCopyWith<_$LoginStateChangeParams> get copyWith =>
+      __$$LoginStateChangeParamsCopyWithImpl<_$LoginStateChangeParams>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(LoginEntity loginEntity) loaded,
+    required TResult Function(Failure failure) error,
+    required TResult Function(List<ValidationField> validations)
+        validationError,
+    required TResult Function(LoginParams params) changeParams,
+  }) {
+    return changeParams(params);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(LoginEntity loginEntity)? loaded,
+    TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
+  }) {
+    return changeParams?.call(params);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(LoginEntity loginEntity)? loaded,
+    TResult Function(Failure failure)? error,
+    TResult Function(List<ValidationField> validations)? validationError,
+    TResult Function(LoginParams params)? changeParams,
+    required TResult orElse(),
+  }) {
+    if (changeParams != null) {
+      return changeParams(params);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(LoginStateInitial value) initial,
+    required TResult Function(LoginStateLoading value) loading,
+    required TResult Function(LoginStateLoaded value) loaded,
+    required TResult Function(LoginStateError value) error,
+    required TResult Function(LoginStateValidationError value) validationError,
+    required TResult Function(LoginStateChangeParams value) changeParams,
+  }) {
+    return changeParams(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(LoginStateInitial value)? initial,
+    TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateLoaded value)? loaded,
+    TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
+  }) {
+    return changeParams?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(LoginStateInitial value)? initial,
+    TResult Function(LoginStateLoading value)? loading,
+    TResult Function(LoginStateLoaded value)? loaded,
+    TResult Function(LoginStateError value)? error,
+    TResult Function(LoginStateValidationError value)? validationError,
+    TResult Function(LoginStateChangeParams value)? changeParams,
+    required TResult orElse(),
+  }) {
+    if (changeParams != null) {
+      return changeParams(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginStateChangeParams implements LoginState {
+  const factory LoginStateChangeParams(final LoginParams params) =
+      _$LoginStateChangeParams;
+
+  LoginParams get params;
+  @JsonKey(ignore: true)
+  _$$LoginStateChangeParamsCopyWith<_$LoginStateChangeParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
